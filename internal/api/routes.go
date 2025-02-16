@@ -15,5 +15,10 @@ func RegisterRoutes(
 
 	mux.Route("/v1", func(r chi.Router) {
 		r.Post("/wallet", httpv1.NewCreateWalletHandler(log))
+		r.Route("/wallet/{walletID}", func(r chi.Router) {
+			r.Get("/", httpv1.NewGetWalletHandler(log))
+			r.Post("/deposit", httpv1.NewDepositToWalletHandler(log))
+			r.Post("/withdraw", httpv1.NewWithDrawFromWalletHandler(log))
+		})
 	})
 }

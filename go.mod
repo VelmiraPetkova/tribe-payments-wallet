@@ -11,8 +11,12 @@ require (
 	go.uber.org/zap v1.27.0
 )
 
+require github.com/ajg/form v1.5.1 // indirect
+
 require (
 	github.com/go-chi/chi v1.5.4 // indirect
+	github.com/go-chi/render v1.0.3
+	github.com/google/uuid v1.6.0
 	github.com/hashicorp/go-syslog v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/mattes/go-expand-tilde v0.0.0-20150330173918-cb884138e64c // indirect
