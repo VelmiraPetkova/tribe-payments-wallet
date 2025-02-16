@@ -41,8 +41,7 @@ This Go application is an HTTP API for managing user wallets. It uses:
 - `walletStore` is like an in-memory store. Consider using **PostgreSQL with GORM**:  
   ```go
   db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-  ```  
-
+ 
   ```  
 - Apply it globally:  
   ```go
